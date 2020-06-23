@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.headerBanner{
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    background-image: url(https://picsum.photos/800/1200/?random=99);
+    background-size: cover;
+}
+.headerBanner .bannerCarousel{
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    animation: bannerMove-l 3s;
+}
+.headerBanner img{
+    height: 100vh;
+}
+.headerBanner .bannerCarousel .photoDescrition{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    /* background-color: rgba(0,0,0, .3);
+    opacity: 0;
+    transition: .3s; */
+}
+/* .headerBanner .bannerCarousel .carousel-item:hover > 
+.photoDescrition{
+    opacity: 1;
+} */
+.headerBanner .bannerCarousel .photoDescrition p{
+    width: 70%;
+    text-align: justify;
+}
+.headerBanner .headerBannerTxt{
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    animation: bannerMove-r 3s;
+}
+
+@keyframes bannerMove-l{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+@keyframes bannerMove-r{
+    0%{
+        right: -100%;
+    }
+    100%{
+        right: 0%;
+    }
+}
